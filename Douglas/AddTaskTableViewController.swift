@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTaskTableViewController: UITableViewController {
+class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class AddTaskTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
     
     
@@ -42,20 +42,57 @@ class AddTaskTableViewController: UITableViewController {
     
     
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        let maxLength = 20
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
+
     
     
     
+    @IBAction func AddTask(_ sender: AnyObject) {
+        
+        
+        if (txtPR.text == ""){
+            //Task Title is blank, do not add a record
+        } else {
+            //add record
+            let name: String = txtPR.text!
+            let description: String = txtDesc.text!
+            taskMgr.addTask(name, note: Note)
+            
+            //dismiss keyboard and reset fields
+            
+            self.view.endEditing(true)
+            txtPR.text = nil
+            txtDesc.text = nil
+            
+            
+            
+        }
+
+        
+        
+    }
     
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     
-    
-    
-    
-    
-    
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+
     
     
     

@@ -10,6 +10,8 @@ import UIKit
 
 class WhiteTaskTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var TaskNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

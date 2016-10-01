@@ -10,6 +10,8 @@ import UIKit
 
 class WhiteNoteTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var NotesLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
