@@ -34,6 +34,7 @@
 		430CD3221D9DE65800B3D98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		430CD3251D9DE65800B3D98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430CD3271D9DE65800B3D98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4315FEB11DA06E9D003D5330 /* Douglas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Douglas.entitlements; sourceTree = "<group>"; };
 		43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30A1D9F521C00190B67 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30C1D9F525000190B67 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		430CD3181D9DE65800B3D98C /* Douglas */ = {
 			isa = PBXGroup;
 			children = (
+				4315FEB11DA06E9D003D5330 /* Douglas.entitlements */,
 				430CD3191D9DE65800B3D98C /* AppDelegate.swift */,
 				43E634FC1D9F49050082FB06 /* TasksViewController.swift */,
 				43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */,
@@ -169,7 +171,13 @@
 					430CD3151D9DE65800B3D98C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 333JD3XATC;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -344,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Douglas/Douglas.entitlements;
 				DEVELOPMENT_TEAM = 333JD3XATC;
 				INFOPLIST_FILE = Douglas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -357,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Douglas/Douglas.entitlements;
 				DEVELOPMENT_TEAM = 333JD3XATC;
 				INFOPLIST_FILE = Douglas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
