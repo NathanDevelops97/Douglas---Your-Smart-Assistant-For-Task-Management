@@ -16,6 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        
+        
+        
+        // Changes Tab Bar Active Color
+        UITabBar.appearance().tintColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
+        
+        //Cutomize navigation bar
+        let navBgImage:UIImage = UIImage(named: "whiteNav")!
+        UINavigationBar.appearance().setBackgroundImage(navBgImage, for: .default)
+        
+        UIBarButtonItem.appearance().tintColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
+        UITabBar.appearance().backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1.0)
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
         return true
     }
 
