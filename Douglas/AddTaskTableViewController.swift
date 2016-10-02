@@ -17,6 +17,12 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let blueColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
+        view.backgroundColor = blueColor
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,6 +49,11 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     
+    @IBAction func dismissButton(_ sender: AnyObject) {
+        
+        self.dismiss(animated: true, completion: nil)
+
+    }
     
     
     
