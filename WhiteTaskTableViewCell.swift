@@ -11,10 +11,14 @@ import UIKit
 class WhiteTaskTableViewCell: UITableViewCell {
 
     @IBOutlet weak var TaskNameLabel: UILabel!
+    @IBOutlet weak var NotesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

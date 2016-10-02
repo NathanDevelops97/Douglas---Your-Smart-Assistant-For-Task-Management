@@ -8,18 +8,94 @@
 
 import UIKit
 
-class TasksViewController: UIViewController {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tblTasks: UITableView!
+    
+    //For persisting data
+    let defaults = UserDefaults.standard
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tblTasks.reloadData()
+        self.tblTasks.register(UINib(nibName: "WhiteTaskTableViewCell", bundle: nil), forCellReuseIdentifier: "nameCell")
+        tblTasks.tableFooterView = UIView()
+        
+        tblTasks.dataSource = self;
+
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tblTasks.reloadData()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+            // #warning Incomplete implementation, return the number of sections
+            return 1
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return taskMgr.tasks.count
+        
+    }
+    
+    //Define how our cells look - 2 lines a heading and a subtitle
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        
+        let identifier = "nameCell"
+        var cell: WhiteTaskTableViewCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? WhiteTaskTableViewCell
+        
+        if cell == nil {
+            tableView.register(UINib(nibName: "WhiteTaskTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? WhiteTaskTableViewCell
+        }
+        
+        
+        //        Assign the contents of our var "items" to the textLabel of each cell
+        //        cell.textLabel!.text = taskMgr.tasks[indexPath.row].name
+        //        cell.detailTextLabel!.text = taskMgr.tasks[indexPath.row].desc
+        
+        cell.TaskNameLabel.text = taskMgr.tasks[indexPath.row].name
+        cell.NotesLabel.text = taskMgr.tasks[indexPath.row].note
+
+        
+        
+     
+        return cell
+        
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+        if (editingStyle == UITableViewCellEditingStyle.delete){
+            
+            taskMgr.removeTask(indexPath.row)
+            tblTasks.reloadData()
+        }
+
+        
+    }
+    
+    
+    
+    
+    
+    
     
 
     /*

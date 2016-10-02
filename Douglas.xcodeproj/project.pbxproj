@@ -21,10 +21,6 @@
 		43E635011D9F49240082FB06 /* WhiteTaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E634FF1D9F49240082FB06 /* WhiteTaskTableViewCell.xib */; };
 		43E635061D9F49590082FB06 /* BlackTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E635041D9F49590082FB06 /* BlackTaskTableViewCell.swift */; };
 		43E635071D9F49590082FB06 /* BlackTaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E635051D9F49590082FB06 /* BlackTaskTableViewCell.xib */; };
-		43E6350B1D9F49990082FB06 /* WhiteNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E635091D9F49990082FB06 /* WhiteNoteTableViewCell.swift */; };
-		43E6350C1D9F49990082FB06 /* WhiteNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E6350A1D9F49990082FB06 /* WhiteNoteTableViewCell.xib */; };
-		43E6350F1D9F49B10082FB06 /* BlackNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E6350D1D9F49B10082FB06 /* BlackNoteTableViewCell.swift */; };
-		43E635101D9F49B10082FB06 /* BlackNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E6350E1D9F49B10082FB06 /* BlackNoteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +41,6 @@
 		43E634FF1D9F49240082FB06 /* WhiteTaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteTaskTableViewCell.xib; sourceTree = "<group>"; };
 		43E635041D9F49590082FB06 /* BlackTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackTaskTableViewCell.swift; sourceTree = "<group>"; };
 		43E635051D9F49590082FB06 /* BlackTaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlackTaskTableViewCell.xib; sourceTree = "<group>"; };
-		43E635091D9F49990082FB06 /* WhiteNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteNoteTableViewCell.swift; sourceTree = "<group>"; };
-		43E6350A1D9F49990082FB06 /* WhiteNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhiteNoteTableViewCell.xib; sourceTree = "<group>"; };
-		43E6350D1D9F49B10082FB06 /* BlackNoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackNoteTableViewCell.swift; sourceTree = "<group>"; };
-		43E6350E1D9F49B10082FB06 /* BlackNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlackNoteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +113,6 @@
 			children = (
 				43E634FE1D9F49240082FB06 /* WhiteTaskTableViewCell.swift */,
 				43E634FF1D9F49240082FB06 /* WhiteTaskTableViewCell.xib */,
-				43E635091D9F49990082FB06 /* WhiteNoteTableViewCell.swift */,
-				43E6350A1D9F49990082FB06 /* WhiteNoteTableViewCell.xib */,
 			);
 			name = White;
 			sourceTree = "<group>";
@@ -132,8 +122,6 @@
 			children = (
 				43E635041D9F49590082FB06 /* BlackTaskTableViewCell.swift */,
 				43E635051D9F49590082FB06 /* BlackTaskTableViewCell.xib */,
-				43E6350D1D9F49B10082FB06 /* BlackNoteTableViewCell.swift */,
-				43E6350E1D9F49B10082FB06 /* BlackNoteTableViewCell.xib */,
 			);
 			name = Black;
 			sourceTree = "<group>";
@@ -209,8 +197,6 @@
 				430CD3231D9DE65800B3D98C /* Assets.xcassets in Resources */,
 				43E635011D9F49240082FB06 /* WhiteTaskTableViewCell.xib in Resources */,
 				430CD3211D9DE65800B3D98C /* Main.storyboard in Resources */,
-				43E6350C1D9F49990082FB06 /* WhiteNoteTableViewCell.xib in Resources */,
-				43E635101D9F49B10082FB06 /* BlackNoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D1D30D1D9F525000190B67 /* TaskManager.swift in Sources */,
-				43E6350B1D9F49990082FB06 /* WhiteNoteTableViewCell.swift in Sources */,
 				430CD31A1D9DE65800B3D98C /* AppDelegate.swift in Sources */,
 				43D1D30F1D9F526400190B67 /* PersistenceHelper.swift in Sources */,
 				43E634FD1D9F49050082FB06 /* TasksViewController.swift in Sources */,
@@ -231,7 +216,6 @@
 				43D1D30B1D9F521C00190B67 /* SettingsTableViewController.swift in Sources */,
 				43E635061D9F49590082FB06 /* BlackTaskTableViewCell.swift in Sources */,
 				43E635001D9F49240082FB06 /* WhiteTaskTableViewCell.swift in Sources */,
-				43E6350F1D9F49B10082FB06 /* BlackNoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
