@@ -10,6 +10,10 @@ import UIKit
 
 class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var taskNameTextField: UITextField!
+    
+    @IBOutlet weak var notesTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,19 +63,19 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func AddTask(_ sender: AnyObject) {
         
         
-        if (txtPR.text == ""){
+        if (taskNameTextField.text == ""){
             //Task Title is blank, do not add a record
         } else {
             //add record
-            let name: String = txtPR.text!
-            let description: String = txtDesc.text!
-            taskMgr.addTask(name, note: Note)
+            let name: String = taskNameTextField.text!
+            let note: String = notesTextField.text!
+            taskMgr.addTask(name, note: note)
             
             //dismiss keyboard and reset fields
             
             self.view.endEditing(true)
-            txtPR.text = nil
-            txtDesc.text = nil
+            taskNameTextField.text = nil
+            notesTextField.text = nil
             
             
             
@@ -83,7 +87,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
