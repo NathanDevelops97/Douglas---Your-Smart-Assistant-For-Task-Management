@@ -13,6 +13,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var taskNameTextField: UITextField!
     
     @IBOutlet weak var notesTextField: UITextField!
+    @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
     var text: String?
     
@@ -20,6 +21,8 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         
+        tableView.tableFooterView = UIView()
+
         let blueColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
         view.backgroundColor = blueColor
         
@@ -61,7 +64,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
         let maxLength = 20
@@ -80,6 +83,8 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         
         if (taskNameTextField.text == ""){
             //Task Title is blank, do not add a record
+            
+            
         } else {
             //add record
             let name: String = taskNameTextField.text!
@@ -106,7 +111,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
     }
