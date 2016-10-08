@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import GameKit
 
 class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
@@ -25,6 +27,9 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
         let blueColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
         view.backgroundColor = blueColor
+        
+        let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        addTaskButton.tintColor = taskColor
         
         if text != nil {
             taskNameTextField.text = text!
@@ -83,7 +88,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         
         if (taskNameTextField.text == ""){
             //Task Title is blank, do not add a record
-            
+         
             
         } else {
             //add record
@@ -96,8 +101,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
             self.view.endEditing(true)
             taskNameTextField.text = nil
             notesTextField.text = nil
-            
-            
+           
         }
 
         
@@ -118,9 +122,11 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
     
     
-    
-    
-    
+ 
+
+
+
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -141,17 +147,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     */
 
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+ 
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -177,4 +173,5 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     }
     */
 
+}*/
 }

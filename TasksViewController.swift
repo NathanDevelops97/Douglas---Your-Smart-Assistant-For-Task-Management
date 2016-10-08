@@ -56,6 +56,19 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath){
+        
+        if (editingStyle == UITableViewCellEditingStyle.delete){
+            
+            taskMgr.removeTask(indexPath.row)
+            tblTasks.reloadData()
+        }
+        
+        
+    }
+    
+    
     //Define how our cells look - 2 lines a heading and a subtitle
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
@@ -83,17 +96,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         
-    }
-    
-     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            taskMgr.tasks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-    
     
     
     
@@ -110,4 +112,5 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
 
+}
 }

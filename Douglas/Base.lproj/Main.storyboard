@@ -132,22 +132,29 @@
                                 <action selector="dismissButton:" destination="Ocs-aX-v9X" id="do5-J8-oo9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add Task" id="Pju-Mh-ig2">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="AddTask:" destination="Ocs-aX-v9X" id="HeW-wn-4Bm"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="irN-i9-drZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pKI-rW-Pqe">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add Task">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddTask:" destination="Ocs-aX-v9X" eventType="touchUpInside" id="LRi-A2-zrS"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addTaskButton" destination="Pju-Mh-ig2" id="ABJ-QO-y87"/>
+                        <outlet property="addTaskButton" destination="irN-i9-drZ" id="dPJ-mu-zfd"/>
                         <outlet property="notesTextField" destination="YUK-vY-guq" id="rfl-ST-lYZ"/>
                         <outlet property="taskNameTextField" destination="LCo-nJ-gff" id="t9e-ll-6Mb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKO-Bo-ntb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.5999999999999" y="505.99700149925042"/>
+            <point key="canvasLocation" x="2038" y="494"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
