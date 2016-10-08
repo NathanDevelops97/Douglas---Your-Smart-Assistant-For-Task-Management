@@ -56,17 +56,15 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath){
-        
-        if (editingStyle == UITableViewCellEditingStyle.delete){
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
             
             taskMgr.removeTask(indexPath.row)
             tblTasks.reloadData()
         }
-        
-        
     }
+
     
     
     //Define how our cells look - 2 lines a heading and a subtitle

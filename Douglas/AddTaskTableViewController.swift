@@ -21,7 +21,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         tableView.tableFooterView = UIView()
 
@@ -88,7 +88,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         
         if (taskNameTextField.text == ""){
             //Task Title is blank, do not add a record
-         
+        
             
         } else {
             //add record
