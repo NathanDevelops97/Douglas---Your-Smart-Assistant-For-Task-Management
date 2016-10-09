@@ -22,17 +22,18 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+
         tableView.tableFooterView = UIView()
 
         let blueColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
         view.backgroundColor = blueColor
         
-        let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
         addTaskButton.tintColor = taskColor
         
         if text != nil {
             taskNameTextField.text = text!
+            
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -97,6 +98,8 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
             taskMgr.addTask(name, note: note)
             
             //dismiss keyboard and reset fields
+            
+
             
             self.view.endEditing(true)
             taskNameTextField.text = nil

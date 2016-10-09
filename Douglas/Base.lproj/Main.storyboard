@@ -132,7 +132,7 @@
                                 <action selector="dismissButton:" destination="Ocs-aX-v9X" id="do5-J8-oo9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="irN-i9-drZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="irN-i9-drZ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pKI-rW-Pqe">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -144,6 +144,7 @@
                                     <action selector="AddTask:" destination="Ocs-aX-v9X" eventType="touchUpInside" id="LRi-A2-zrS"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
