@@ -22,14 +22,19 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        // self.tableView.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+    
         tableView.tableFooterView = UIView()
 
-        let blueColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
-        view.backgroundColor = blueColor
+        let darkModeColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        view.backgroundColor = darkModeColor
         
         let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
         addTaskButton.tintColor = taskColor
+        
+        //Cutomize navigation bar
+        let navBgImage:UIImage = UIImage(named: "ATNavBar")!
+        UINavigationBar.appearance().setBackgroundImage(navBgImage, for: .default)
         
         if text != nil {
             taskNameTextField.text = text!
@@ -67,6 +72,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
 
     }
+    
     
     
     

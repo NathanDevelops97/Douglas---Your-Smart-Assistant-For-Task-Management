@@ -18,10 +18,19 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        self.tblTasks.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+
 
         self.tblTasks.reloadData()
         self.tblTasks.register(UINib(nibName: "WhiteTaskTableViewCell", bundle: nil), forCellReuseIdentifier: "nameCell")
         tblTasks.tableFooterView = UIView()
+        
+        let darkModeColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        view.backgroundColor = darkModeColor
+        
         
         tblTasks.dataSource = self;
 
@@ -55,6 +64,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return taskMgr.tasks.count
         
     }
+    
+    func tableView(_ willDisplayforRowAttableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {

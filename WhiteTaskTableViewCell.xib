@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A28-d8-YS5">
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.25098039215686274" green="0.2627450980392157" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe"/>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.43529411764705883" green="0.8784313725490196" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -39,6 +39,7 @@
                     <constraint firstItem="MfP-4z-lXe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="xuv-zx-5Tc"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.25098039220000001" green="0.26274509800000001" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="NotesLabel" destination="OeG-zs-dsy" id="WCe-xC-QHd"/>
                 <outlet property="TaskNameLabel" destination="A28-d8-YS5" id="IZm-OV-jpD"/>
