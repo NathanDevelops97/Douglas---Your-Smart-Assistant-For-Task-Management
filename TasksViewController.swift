@@ -54,7 +54,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return 90.0;//Choose your custom row height
+        return 44.0;//Choose your custom row height
     }
     
     
