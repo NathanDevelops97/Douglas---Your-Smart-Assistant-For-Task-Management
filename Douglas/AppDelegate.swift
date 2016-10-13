@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let darkModeColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
         UITabBar.appearance().barTintColor = darkModeColor
 
-        
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)]
+
         
         // Changes Tab Bar Active Color
         UITabBar.appearance().tintColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
@@ -31,19 +32,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().tintColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
         UITabBar.appearance().backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1.0)
         
+        let tabBarBackground = UIImage(named: "Bar.png")!
+        UITabBar.appearance().backgroundImage = tabBarBackground
 
         
         //Cutomize navigation bar
-        let navBgImage:UIImage = UIImage(named: "MainNav")!
+        let navBgImage:UIImage = UIImage(named: "navBarDark")!
         UINavigationBar.appearance().setBackgroundImage(navBgImage, for: .default)
         
         
+        application.statusBarStyle = UIStatusBarStyle.lightContent
+        // instead of
+        // UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        // which gives warning about deprecation in iOS 9
         
+        return true
         
         
         
         return true
     }
+    
+  
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

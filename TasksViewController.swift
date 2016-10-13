@@ -28,7 +28,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tblTasks.register(UINib(nibName: "WhiteTaskTableViewCell", bundle: nil), forCellReuseIdentifier: "nameCell")
         tblTasks.tableFooterView = UIView()
         
-        let darkModeColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        let darkModeColor = UIColor(red: 52/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1.0)
         view.backgroundColor = darkModeColor
         
         
@@ -37,15 +37,20 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tblTasks.reloadData()
     }
+    
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {

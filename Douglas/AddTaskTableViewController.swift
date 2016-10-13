@@ -32,9 +32,9 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
         addTaskButton.tintColor = taskColor
         
-        //Cutomize navigation bar
-        let navBgImage:UIImage = UIImage(named: "ATNavBar")!
-        UINavigationBar.appearance().setBackgroundImage(navBgImage, for: .default)
+        tableView.allowsSelection = false;
+        
+
         
         if text != nil {
             taskNameTextField.text = text!
@@ -64,6 +64,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 //        // #warning Incomplete implementation, return the number of rows
 //        return 2
 //    }
+    
     
     
     
