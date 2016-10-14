@@ -34,6 +34,9 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         
         tableView.allowsSelection = false;
         
+        taskNameTextField.delegate = self
+        notesTextField.delegate = self
+        
 
         
         if text != nil {
@@ -52,6 +55,24 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        let maxLength = 75
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
+    }
+    
+    
+    
+    
 
     // MARK: - Table view data source
 
@@ -77,16 +98,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool
-    {
-        let maxLength = 20
-        let currentString: NSString = textField.text! as NSString
-        let newString: NSString =
-            currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
-    
+  
 
     
     

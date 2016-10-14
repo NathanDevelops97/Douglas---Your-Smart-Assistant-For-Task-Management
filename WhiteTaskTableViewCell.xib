@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="27" id="KGk-i7-Jjw" customClass="WhiteTaskTableViewCell" customModule="Douglas" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="71" id="KGk-i7-Jjw" customClass="WhiteTaskTableViewCell" customModule="Douglas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="287" height="43"/>
+                <frame key="frameInset" width="286" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A28-d8-YS5">
@@ -21,21 +21,22 @@
                         <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
+                        <frame key="frameInset" minX="39" minY="37" width="238" height="47"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.43529411764705883" green="0.8784313725490196" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe"/>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MfP-4z-lXe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="3o7-y7-QPS"/>
-                    <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="MfP-4z-lXe" secondAttribute="trailing" constant="8" id="F0O-hh-qvA"/>
-                    <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="WQ6-7X-leA"/>
-                    <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="14" id="nFZ-R7-06P"/>
-                    <constraint firstItem="OeG-zs-dsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="35" id="nQP-mp-jsj"/>
-                    <constraint firstItem="MfP-4z-lXe" firstAttribute="centerY" secondItem="A28-d8-YS5" secondAttribute="centerY" id="oW2-a9-9PR"/>
-                    <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="OeG-zs-dsy" secondAttribute="leading" constant="-4" id="pc2-zA-Mob"/>
+                    <constraint firstItem="MfP-4z-lXe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="3o7-y7-QPS"/>
+                    <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="MfP-4z-lXe" secondAttribute="trailing" constant="11" id="F0O-hh-qvA"/>
+                    <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="WQ6-7X-leA"/>
+                    <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="4" id="nFZ-R7-06P"/>
+                    <constraint firstItem="OeG-zs-dsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="31" id="nQP-mp-jsj"/>
+                    <constraint firstItem="MfP-4z-lXe" firstAttribute="centerY" secondItem="A28-d8-YS5" secondAttribute="centerY" constant="-1.25" id="oW2-a9-9PR"/>
+                    <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="OeG-zs-dsy" secondAttribute="leading" id="pc2-zA-Mob"/>
                     <constraint firstItem="MfP-4z-lXe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xuv-zx-5Tc"/>
                 </constraints>
             </tableViewCellContentView>
@@ -44,7 +45,7 @@
                 <outlet property="NotesLabel" destination="OeG-zs-dsy" id="WCe-xC-QHd"/>
                 <outlet property="TaskNameLabel" destination="A28-d8-YS5" id="IZm-OV-jpD"/>
             </connections>
-            <point key="canvasLocation" x="44" y="54"/>
+            <point key="canvasLocation" x="44" y="80"/>
         </tableViewCell>
     </objects>
     <resources>

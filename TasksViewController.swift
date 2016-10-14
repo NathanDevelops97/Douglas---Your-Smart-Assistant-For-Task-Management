@@ -115,38 +115,33 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // Global Variables/Constants
     
-    var extraHeight:CGFloat?
-    var selectedRowIndex:Int?
+    var selectedCellIndexPath: NSIndexPath?
     
+    let selectedCellHeight: CGFloat = 88.0
+    let unselectedCellHeight: CGFloat = 44.0
+
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        
-        if extraHeight != nil && selectedRowIndex != nil && selectedRowIndex == indexPath.row{
-            return 44 + extraHeight!
-        }else{
-            return 44
+        if selectedCellIndexPath == indexPath as NSIndexPath?  {
+            return selectedCellHeight
         }
+        return unselectedCellHeight
     }
-    
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tblTasks.beginUpdates()
-        selectedRowIndex = indexPath.row
-        extraHeight = 90
-        self.tblTasks.endUpdates()
+        if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath as NSIndexPath? {
+            selectedCellIndexPath = nil
+        } else {
+            selectedCellIndexPath = indexPath as NSIndexPath?
+        }
         
-    }
-    
-     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.tblTasks.beginUpdates()
-        selectedRowIndex = indexPath.row
-        extraHeight = 0
-        self.tblTasks.endUpdates()
+        tableView.beginUpdates()
+        tableView.endUpdates()
         
-
+        if selectedCellIndexPath != nil {
+            // This ensures, that the cell is fully visible once expanded
+            tableView.scrollToRow(at: indexPath as IndexPath, at: .none, animated: true)
+        }
     }
-
-    
 
     /*
     // MARK: - Navigation

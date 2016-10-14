@@ -111,7 +111,7 @@
                                             <frame key="frameInset" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUK-vY-guq">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUK-vY-guq">
                                                     <color key="backgroundColor" red="0.25098039220000001" green="0.26274509800000001" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -126,7 +126,7 @@
                                             <constraints>
                                                 <constraint firstItem="YUK-vY-guq" firstAttribute="centerX" secondItem="vQw-yC-bjA" secondAttribute="centerX" constant="1" id="6bV-4i-o8R"/>
                                                 <constraint firstItem="YUK-vY-guq" firstAttribute="trailing" secondItem="vQw-yC-bjA" secondAttribute="trailingMargin" constant="1" id="aVE-zL-n2r"/>
-                                                <constraint firstAttribute="bottom" secondItem="YUK-vY-guq" secondAttribute="bottom" constant="65" id="lcv-LJ-L5G"/>
+                                                <constraint firstAttribute="bottom" secondItem="YUK-vY-guq" secondAttribute="bottom" id="lcv-LJ-L5G"/>
                                                 <constraint firstItem="YUK-vY-guq" firstAttribute="top" secondItem="vQw-yC-bjA" secondAttribute="top" id="sq8-8o-5Nr"/>
                                             </constraints>
                                         </tableViewCellContentView>
