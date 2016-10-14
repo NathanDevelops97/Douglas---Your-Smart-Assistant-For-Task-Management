@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIBarButtonItem.appearance().tintColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
         
-        let tabBarBackground = UIImage(named: "Bar.png")!
+        _ = UIImage(named: "Bar.png")!
 
         
         //Cutomize navigation bar
@@ -48,7 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        return true
     }
     
   

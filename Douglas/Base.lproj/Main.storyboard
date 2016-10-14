@@ -22,11 +22,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-46-uti">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" id="RDd-lc-CpF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" id="RDd-lc-CpF">
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDd-lc-CpF" id="6jE-6F-V7d">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -80,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v6k-fc-0ka" id="Vfp-ZA-GlE">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCo-nJ-gff">
@@ -108,7 +108,7 @@
                                         <rect key="frame" x="0.0" y="108" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9DJ-AK-ihp" id="vQw-yC-bjA">
-                                            <frame key="frameInset" width="375" height="110"/>
+                                            <frame key="frameInset" width="375" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUK-vY-guq">
@@ -124,8 +124,8 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YUK-vY-guq" firstAttribute="centerX" secondItem="vQw-yC-bjA" secondAttribute="centerX" constant="2" id="6bV-4i-o8R"/>
-                                                <constraint firstItem="YUK-vY-guq" firstAttribute="trailing" secondItem="vQw-yC-bjA" secondAttribute="trailingMargin" constant="2" id="aVE-zL-n2r"/>
+                                                <constraint firstItem="YUK-vY-guq" firstAttribute="centerX" secondItem="vQw-yC-bjA" secondAttribute="centerX" constant="1" id="6bV-4i-o8R"/>
+                                                <constraint firstItem="YUK-vY-guq" firstAttribute="trailing" secondItem="vQw-yC-bjA" secondAttribute="trailingMargin" constant="1" id="aVE-zL-n2r"/>
                                                 <constraint firstAttribute="bottom" secondItem="YUK-vY-guq" secondAttribute="bottom" constant="65" id="lcv-LJ-L5G"/>
                                                 <constraint firstItem="YUK-vY-guq" firstAttribute="top" secondItem="vQw-yC-bjA" secondAttribute="top" id="sq8-8o-5Nr"/>
                                             </constraints>

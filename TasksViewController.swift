@@ -14,7 +14,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //For persisting data
     let defaults = UserDefaults.standard
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,41 +51,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return 44.0;//Choose your custom row height
-    }
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-            // #warning Incomplete implementation, return the number of sections
-            return 1
-    }
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return taskMgr.tasks.count
         
     }
     
-    func tableView(_ willDisplayforRowAttableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-            
-            taskMgr.removeTask(indexPath.row)
-            tblTasks.reloadData()
-        }
-    }
 
-    
     
     //Define how our cells look - 2 lines a heading and a subtitle
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -106,18 +77,75 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.TaskNameLabel.text = taskMgr.tasks[indexPath.row].name
         cell.NotesLabel.text = taskMgr.tasks[indexPath.row].note
+        
+        cell.selectionStyle = .none
 
         
         
-     
         return cell
         
+    }
+
+   
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+            // #warning Incomplete implementation, return the number of sections
+            return 1
+    }
+    
+    
+    
+       func tableView(_ willDisplayforRowAttableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            
+            taskMgr.removeTask(indexPath.row)
+            tblTasks.reloadData()
+        }
+    }
+
+    
+   // EXPAND CELL ON CLICK
+    
+    // Global Variables/Constants
+    
+    var extraHeight:CGFloat?
+    var selectedRowIndex:Int?
+    
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         
+        if extraHeight != nil && selectedRowIndex != nil && selectedRowIndex == indexPath.row{
+            return 44 + extraHeight!
+        }else{
+            return 44
+        }
+    }
     
     
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tblTasks.beginUpdates()
+        selectedRowIndex = indexPath.row
+        extraHeight = 90
+        self.tblTasks.endUpdates()
+        
+    }
     
-    
+     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.tblTasks.beginUpdates()
+        selectedRowIndex = indexPath.row
+        extraHeight = 0
+        self.tblTasks.endUpdates()
+        
+
+    }
+
     
 
     /*
@@ -130,5 +158,5 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
 
-}
+
 }
