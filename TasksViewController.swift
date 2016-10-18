@@ -122,11 +122,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let unselectedCellHeight: CGFloat = 44.0
 
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        self.tblTasks.rowHeight = UITableViewAutomaticDimension
+        
         if selectedCellIndexPath == indexPath as NSIndexPath?  {
             return selectedCellHeight
         }
-        return unselectedCellHeight + UITableViewAutomaticDimension
+        return unselectedCellHeight
     }
+    
+  
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath as NSIndexPath? {
