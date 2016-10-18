@@ -111,6 +111,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     
+    
    // EXPAND CELL ON CLICK
     
     // Global Variables/Constants
@@ -124,7 +125,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if selectedCellIndexPath == indexPath as NSIndexPath?  {
             return selectedCellHeight
         }
-        return unselectedCellHeight
+        return unselectedCellHeight + UITableViewAutomaticDimension
     }
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

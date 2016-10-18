@@ -63,7 +63,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
-        let maxLength = 75
+        let maxLength = 100
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
