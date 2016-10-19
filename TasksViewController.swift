@@ -19,7 +19,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tblTasks.estimatedRowHeight = 55
+        tblTasks.rowHeight = UITableViewAutomaticDimension
         
         self.tblTasks.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
 
@@ -80,7 +81,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.selectionStyle = .none
 
-        
+        cell.NotesLabel.isHidden = true
         
         return cell
         
@@ -128,6 +129,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if selectedCellIndexPath == indexPath as NSIndexPath?  {
             return selectedCellHeight
         }
+        
+        
         return unselectedCellHeight
     }
     
@@ -136,8 +139,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath as NSIndexPath? {
             selectedCellIndexPath = nil
+            let myCell = tableView.cellForRow(at: indexPath) as! WhiteTaskTableViewCell
+            myCell.NotesLabel.isHidden = true
         } else {
             selectedCellIndexPath = indexPath as NSIndexPath?
+            let myCell = tableView.cellForRow(at: indexPath) as! WhiteTaskTableViewCell
+            myCell.NotesLabel.isHidden = false
+
         }
         
         tableView.beginUpdates()
@@ -146,6 +154,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if selectedCellIndexPath != nil {
             // This ensures, that the cell is fully visible once expanded
             tableView.scrollToRow(at: indexPath as IndexPath, at: .none, animated: true)
+            
+            
         }
     }
 

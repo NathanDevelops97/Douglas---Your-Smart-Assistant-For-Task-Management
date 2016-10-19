@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="287" height="87.5"/>
+                <frame key="frameInset" width="287" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A28-d8-YS5">
@@ -21,7 +21,12 @@
                         <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="HB2-A6-ocO"/>
+                            <constraint firstAttribute="height" constant="20" id="bte-gQ-ndk"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
                         <frame key="frameInset" minX="39" minY="37" width="238" height="47"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,9 +35,12 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="1Vb-Va-rFU"/>
                     <constraint firstItem="MfP-4z-lXe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="3o7-y7-QPS"/>
                     <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="MfP-4z-lXe" secondAttribute="trailing" constant="11" id="F0O-hh-qvA"/>
+                    <constraint firstAttribute="bottom" secondItem="OeG-zs-dsy" secondAttribute="bottom" constant="4" id="KAl-d2-e1h"/>
                     <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="WQ6-7X-leA"/>
+                    <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="4.5" id="jg4-Qq-Bbc"/>
                     <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="4" id="nFZ-R7-06P"/>
                     <constraint firstItem="OeG-zs-dsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="31" id="nQP-mp-jsj"/>
                     <constraint firstItem="MfP-4z-lXe" firstAttribute="centerY" secondItem="A28-d8-YS5" secondAttribute="centerY" constant="-1.25" id="oW2-a9-9PR"/>
