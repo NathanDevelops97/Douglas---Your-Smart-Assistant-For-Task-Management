@@ -130,7 +130,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return selectedCellHeight
         }
         
-        
+            
         return unselectedCellHeight
     }
     

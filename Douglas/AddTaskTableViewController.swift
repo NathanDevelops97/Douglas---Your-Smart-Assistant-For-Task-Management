@@ -58,16 +58,20 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     
+    @IBOutlet weak var characterCountLabel: UILabel!
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
-        let maxLength = 68
-        let currentString: NSString = textField.text! as NSString
-        let newString: NSString =
-            currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
+        let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
+        if textField == taskNameTextField {
+            return newLength <= 25 // Bool
+        } else if textField == notesTextField {
+            return newLength <= 40 // Bool
+        }
+        
+        return true
     }
     
     
