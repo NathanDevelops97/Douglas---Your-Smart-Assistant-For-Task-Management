@@ -11,6 +11,10 @@
 		430CD3211D9DE65800B3D98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430CD31F1D9DE65800B3D98C /* Main.storyboard */; };
 		430CD3231D9DE65800B3D98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 430CD3221D9DE65800B3D98C /* Assets.xcassets */; };
 		430CD3261D9DE65800B3D98C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 430CD3241D9DE65800B3D98C /* LaunchScreen.storyboard */; };
+		4349E78B1DBE5ADD005E3C9F /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349E7891DBE5ADD005E3C9F /* PNCell.swift */; };
+		4349E78C1DBE5ADD005E3C9F /* PNCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4349E78A1DBE5ADD005E3C9F /* PNCell.xib */; };
+		4349E7911DBE5B0E005E3C9F /* ASCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349E78F1DBE5B0E005E3C9F /* ASCell.swift */; };
+		4349E7921DBE5B0E005E3C9F /* ASCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4349E7901DBE5B0E005E3C9F /* ASCell.xib */; };
 		43D1D3091D9F51E800190B67 /* AddTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */; };
 		43D1D30B1D9F521C00190B67 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D30A1D9F521C00190B67 /* SettingsTableViewController.swift */; };
 		43D1D30D1D9F525000190B67 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D30C1D9F525000190B67 /* TaskManager.swift */; };
@@ -31,6 +35,10 @@
 		430CD3251D9DE65800B3D98C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		430CD3271D9DE65800B3D98C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4315FEB11DA06E9D003D5330 /* Douglas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Douglas.entitlements; sourceTree = "<group>"; };
+		4349E7891DBE5ADD005E3C9F /* PNCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNCell.swift; path = Douglas/PNCell.swift; sourceTree = "<group>"; };
+		4349E78A1DBE5ADD005E3C9F /* PNCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PNCell.xib; path = Douglas/PNCell.xib; sourceTree = "<group>"; };
+		4349E78F1DBE5B0E005E3C9F /* ASCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCell.swift; sourceTree = "<group>"; };
+		4349E7901DBE5B0E005E3C9F /* ASCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASCell.xib; sourceTree = "<group>"; };
 		43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30A1D9F521C00190B67 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30C1D9F525000190B67 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 			children = (
 				43E635041D9F49590082FB06 /* BlackTaskTableViewCell.swift */,
 				43E635051D9F49590082FB06 /* BlackTaskTableViewCell.xib */,
+				4349E7891DBE5ADD005E3C9F /* PNCell.swift */,
+				4349E78A1DBE5ADD005E3C9F /* PNCell.xib */,
+				4349E78F1DBE5B0E005E3C9F /* ASCell.swift */,
+				4349E7901DBE5B0E005E3C9F /* ASCell.xib */,
 			);
 			name = Black;
 			sourceTree = "<group>";
@@ -194,9 +206,11 @@
 			files = (
 				43E635071D9F49590082FB06 /* BlackTaskTableViewCell.xib in Resources */,
 				430CD3261D9DE65800B3D98C /* LaunchScreen.storyboard in Resources */,
+				4349E7921DBE5B0E005E3C9F /* ASCell.xib in Resources */,
 				430CD3231D9DE65800B3D98C /* Assets.xcassets in Resources */,
 				43E635011D9F49240082FB06 /* WhiteTaskTableViewCell.xib in Resources */,
 				430CD3211D9DE65800B3D98C /* Main.storyboard in Resources */,
+				4349E78C1DBE5ADD005E3C9F /* PNCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D1D30D1D9F525000190B67 /* TaskManager.swift in Sources */,
+				4349E7911DBE5B0E005E3C9F /* ASCell.swift in Sources */,
 				430CD31A1D9DE65800B3D98C /* AppDelegate.swift in Sources */,
 				43D1D30F1D9F526400190B67 /* PersistenceHelper.swift in Sources */,
+				4349E78B1DBE5ADD005E3C9F /* PNCell.swift in Sources */,
 				43E634FD1D9F49050082FB06 /* TasksViewController.swift in Sources */,
 				43D1D3131D9F528400190B67 /* TaskModel.xcdatamodeld in Sources */,
 				43D1D3091D9F51E800190B67 /* AddTaskTableViewController.swift in Sources */,
