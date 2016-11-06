@@ -37,7 +37,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         taskNameTextField.delegate = self
         notesTextField.delegate = self
         
-
+        
         
         if text != nil {
             taskNameTextField.text = text!
@@ -146,12 +146,7 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
 
-    
-    
  
-
-
-
 
 
     /*

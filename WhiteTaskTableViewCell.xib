@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="71" id="KGk-i7-Jjw" customClass="WhiteTaskTableViewCell" customModule="Douglas" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="71" id="KGk-i7-Jjw" customClass="WhiteTaskTableViewCell" customModule="Douglas" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="287" height="88"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A28-d8-YS5">
+                        <rect key="frame" x="16" y="12" width="87" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Open Task icon" translatesAutoresizingMaskIntoConstraints="NO" id="MfP-4z-lXe">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="HB2-A6-ocO"/>
-                            <constraint firstAttribute="height" constant="20" id="bte-gQ-ndk"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
-                        <frame key="frameInset" minX="39" minY="37" width="238" height="47"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-zs-dsy">
+                        <rect key="frame" x="16" y="37" width="238" height="47"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.43529411764705883" green="0.8784313725490196" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -36,16 +34,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="1Vb-Va-rFU"/>
-                    <constraint firstItem="MfP-4z-lXe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="3o7-y7-QPS"/>
-                    <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="MfP-4z-lXe" secondAttribute="trailing" constant="11" id="F0O-hh-qvA"/>
                     <constraint firstAttribute="bottom" secondItem="OeG-zs-dsy" secondAttribute="bottom" constant="4" id="KAl-d2-e1h"/>
                     <constraint firstItem="A28-d8-YS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="WQ6-7X-leA"/>
                     <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="4.5" id="jg4-Qq-Bbc"/>
                     <constraint firstItem="OeG-zs-dsy" firstAttribute="top" secondItem="A28-d8-YS5" secondAttribute="bottom" constant="4" id="nFZ-R7-06P"/>
-                    <constraint firstItem="OeG-zs-dsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="31" id="nQP-mp-jsj"/>
-                    <constraint firstItem="MfP-4z-lXe" firstAttribute="centerY" secondItem="A28-d8-YS5" secondAttribute="centerY" constant="-1.25" id="oW2-a9-9PR"/>
+                    <constraint firstItem="OeG-zs-dsy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nQP-mp-jsj"/>
                     <constraint firstItem="A28-d8-YS5" firstAttribute="leading" secondItem="OeG-zs-dsy" secondAttribute="leading" id="pc2-zA-Mob"/>
-                    <constraint firstItem="MfP-4z-lXe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xuv-zx-5Tc"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.25098039220000001" green="0.26274509800000001" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +50,4 @@
             <point key="canvasLocation" x="44" y="80"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Open Task icon" width="18" height="18"/>
-    </resources>
 </document>
