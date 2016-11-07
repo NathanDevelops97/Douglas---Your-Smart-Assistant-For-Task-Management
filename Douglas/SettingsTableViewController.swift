@@ -12,6 +12,14 @@ class SettingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.tableView.reloadData()
+        self.tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNCell")
+                self.tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "ASCell")
+        tableView.tableFooterView = UIView()
+        
+   
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,13 +33,15 @@ class SettingsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +52,37 @@ class SettingsTableViewController: UITableViewController {
     
     
     
+    //Define how our cells look - 2 lines a heading and a subtitle
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        
+        let identifier = "PNCell"
+        var cell: PNCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
+        
+        if cell == nil {
+            tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
+        }
+        
+        let identifier2 = "ASCell"
+        var cell2: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+        
+        if cell2 == nil {
+            tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell2 = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+        }
+        
+        
+        cell2.ASTxtLabel.text = "Review Douglas On The App Store"
+        cell.TxtLabel.text = "Push Notifications"
+        
+        return cell
+        
+        
+        
+    }
     
+
     
     
     

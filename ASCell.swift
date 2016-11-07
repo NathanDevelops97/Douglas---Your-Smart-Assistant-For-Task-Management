@@ -10,6 +10,8 @@ import UIKit
 
 class ASCell: UITableViewCell {
 
+    @IBOutlet weak var ASTxtLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

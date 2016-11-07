@@ -10,6 +10,9 @@ import UIKit
 
 class PNCell: UITableViewCell {
 
+    @IBOutlet weak var TxtLabel: UILabel!
+    @IBOutlet weak var PNSwitch: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
