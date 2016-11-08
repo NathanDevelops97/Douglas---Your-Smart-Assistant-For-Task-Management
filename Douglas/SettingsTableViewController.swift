@@ -10,13 +10,16 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet var settingsTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         self.tableView.reloadData()
-        self.tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNCell")
-                self.tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "ASCell")
+        self.settingsTable.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNcell")
+        self.settingsTable.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "AScell")
+
         tableView.tableFooterView = UIView()
         
    
@@ -41,12 +44,12 @@ class SettingsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
 
     
@@ -55,30 +58,36 @@ class SettingsTableViewController: UITableViewController {
     //Define how our cells look - 2 lines a heading and a subtitle
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        
-        let identifier = "PNCell"
+        if indexPath.row == 0 {
+        let identifier = "PNcell"
         var cell: PNCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
         
         if cell == nil {
             tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: identifier)
             cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
         }
+           
+        cell.TxtLabel.text = "Push Notifications"
+            
+        return cell
+            
+        } else if indexPath.row == 1 {
         
-        let identifier2 = "ASCell"
-        var cell2: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+        let identifier2 = "AScell"
+        var cell2: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier2) as? ASCell
         
         if cell2 == nil {
-            tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier)
-            cell2 = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+            tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier2)
+            cell2 = tableView.dequeueReusableCell(withIdentifier: identifier2) as? ASCell
         }
-        
-        
+            
         cell2.ASTxtLabel.text = "Review Douglas On The App Store"
-        cell.TxtLabel.text = "Push Notifications"
+
+        return cell2
         
-        return cell
-        
-        
+        }
+    
+        return UITableViewCell()
         
     }
     
