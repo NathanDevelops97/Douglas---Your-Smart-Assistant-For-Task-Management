@@ -37,6 +37,7 @@
             <connections>
                 <outlet property="ASTxtLabel" destination="n6q-3e-kdn" id="9fL-Cf-9vr"/>
             </connections>
+            <point key="canvasLocation" x="27" y="55"/>
         </tableViewCell>
     </objects>
 </document>

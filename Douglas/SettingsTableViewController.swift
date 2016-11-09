@@ -16,9 +16,10 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        self.tableView.reloadData()
-        self.settingsTable.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNcell")
-        self.settingsTable.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "AScell")
+        self.settingsTable.reloadData()
+//        self.settingsTable.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNcell")
+//        self.settingsTable.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "AScell")
+
 
         tableView.tableFooterView = UIView()
         
@@ -30,15 +31,19 @@ class SettingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
-    }
+   
 
     // MARK: - Table view data source
 
@@ -51,78 +56,44 @@ class SettingsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
-
     
     
     
-    //Define how our cells look - 2 lines a heading and a subtitle
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
+            
         let identifier = "PNcell"
         var cell: PNCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
-        
-        if cell == nil {
-            tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: identifier)
-            cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
-        }
-           
-        cell.TxtLabel.text = "Push Notifications"
             
+        if cell == nil {
+        tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: identifier)
+        cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
+                
+        cell.TxtLabel.text = "Push Notifications"
+                
         return cell
             
         } else if indexPath.row == 1 {
-        
-        let identifier2 = "AScell"
-        var cell2: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier2) as? ASCell
-        
-        if cell2 == nil {
-            tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier2)
-            cell2 = tableView.dequeueReusableCell(withIdentifier: identifier2) as? ASCell
-        }
             
-        cell2.ASTxtLabel.text = "Review Douglas On The App Store"
-
-        return cell2
-        
-        }
+        let identifier = "AScell"
     
-        return UITableViewCell()
-        
-    }
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        var cell: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+                
+        if cell == nil {
+        tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier)
+        cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
+                            }
+                
+        cell.ASTxtLabel.text = "Review Douglas On The App Store"
+                
         return cell
+
+        }
+        
     }
-    */
+        return UITableViewCell()
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -169,4 +140,6 @@ class SettingsTableViewController: UITableViewController {
     }
     */
 
+}
+    
 }

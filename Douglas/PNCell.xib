@@ -41,7 +41,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="PNSwitch" destination="DYn-bU-jhh" id="Gho-kc-IpI"/>
                 <outlet property="TxtLabel" destination="yNL-m2-bRp" id="Is9-bk-y1T"/>
             </connections>
         </tableViewCell>
