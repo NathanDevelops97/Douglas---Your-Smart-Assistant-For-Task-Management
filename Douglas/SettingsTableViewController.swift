@@ -17,19 +17,16 @@ class SettingsTableViewController: UITableViewController {
         
         
         self.settingsTable.reloadData()
-//        self.settingsTable.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: "PNcell")
-//        self.settingsTable.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: "AScell")
+
 
 
         tableView.tableFooterView = UIView()
+        self.view.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
         
-   
+         let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+        
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     
@@ -61,6 +58,9 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+
+        
         if indexPath.row == 0 {
             
         let identifier = "PNcell"
@@ -71,27 +71,27 @@ class SettingsTableViewController: UITableViewController {
         cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
                 
         cell.TxtLabel.text = "Push Notifications"
-                
+        cell.backgroundColor = UIColor(red: 54/255.0, green: 57/255.0, blue: 58/255.0, alpha: 1.0)
         return cell
+            }
             
         } else if indexPath.row == 1 {
             
         let identifier = "AScell"
-    
         var cell: ASCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
-                
+            
         if cell == nil {
         tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier)
         cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
-                            }
                 
         cell.ASTxtLabel.text = "Review Douglas On The App Store"
-                
+        cell.backgroundColor = UIColor(red: 54/255.0, green: 57/255.0, blue: 58/255.0, alpha: 1.0)
         return cell
 
         }
+        }
         
-    }
+    
         return UITableViewCell()
 
 
