@@ -26,8 +26,8 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
     
         tableView.tableFooterView = UIView()
 
-        let darkModeColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
-        view.backgroundColor = darkModeColor
+        self.view.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+
         
         let taskColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
         addTaskButton.tintColor = taskColor

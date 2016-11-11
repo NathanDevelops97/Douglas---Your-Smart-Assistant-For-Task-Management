@@ -69,9 +69,9 @@ class SettingsTableViewController: UITableViewController {
         if cell == nil {
         tableView.register(UINib(nibName: "PNCell", bundle: nil), forCellReuseIdentifier: identifier)
         cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? PNCell
-                
-        cell.TxtLabel.text = "Push Notifications"
         cell.backgroundColor = UIColor(red: 54/255.0, green: 57/255.0, blue: 58/255.0, alpha: 1.0)
+       
+        cell.TxtLabel.text = "Push Notifications"
         return cell
             }
             
@@ -83,9 +83,9 @@ class SettingsTableViewController: UITableViewController {
         if cell == nil {
         tableView.register(UINib(nibName: "ASCell", bundle: nil), forCellReuseIdentifier: identifier)
         cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? ASCell
-                
-        cell.ASTxtLabel.text = "Review Douglas On The App Store"
         cell.backgroundColor = UIColor(red: 54/255.0, green: 57/255.0, blue: 58/255.0, alpha: 1.0)
+        
+        cell.ASTxtLabel.text = "Review Douglas On The App Store"
         return cell
 
         }
