@@ -15,14 +15,7 @@
 		4349E78C1DBE5ADD005E3C9F /* PNCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4349E78A1DBE5ADD005E3C9F /* PNCell.xib */; };
 		4349E7911DBE5B0E005E3C9F /* ASCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349E78F1DBE5B0E005E3C9F /* ASCell.swift */; };
 		4349E7921DBE5B0E005E3C9F /* ASCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4349E7901DBE5B0E005E3C9F /* ASCell.xib */; };
-		439D72561DDFD90A00FC38B3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439D72541DDFD90A00FC38B3 /* Interface.storyboard */; };
-		439D72581DDFD90A00FC38B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439D72571DDFD90A00FC38B3 /* Assets.xcassets */; };
 		439D725F1DDFD90A00FC38B3 /* DouglasWatchKitApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 439D725E1DDFD90A00FC38B3 /* DouglasWatchKitApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		439D72661DDFD90A00FC38B3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D72651DDFD90A00FC38B3 /* InterfaceController.swift */; };
-		439D72681DDFD90A00FC38B3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D72671DDFD90A00FC38B3 /* ExtensionDelegate.swift */; };
-		439D726A1DDFD90A00FC38B3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439D72691DDFD90A00FC38B3 /* NotificationController.swift */; };
-		439D726C1DDFD90A00FC38B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439D726B1DDFD90A00FC38B3 /* Assets.xcassets */; };
-		439D72701DDFD90A00FC38B3 /* DouglasWatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 439D72521DDFD90A00FC38B3 /* DouglasWatchKitApp.app */; };
 		43D1D3091D9F51E800190B67 /* AddTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */; };
 		43D1D30B1D9F521C00190B67 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D30A1D9F521C00190B67 /* SettingsTableViewController.swift */; };
 		43D1D30D1D9F525000190B67 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1D30C1D9F525000190B67 /* TaskManager.swift */; };
@@ -43,13 +36,6 @@
 			remoteGlobalIDString = 439D725D1DDFD90A00FC38B3;
 			remoteInfo = "DouglasWatchKitApp Extension";
 		};
-		439D726E1DDFD90A00FC38B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 430CD30E1D9DE65800B3D98C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 439D72511DDFD90A00FC38B3;
-			remoteInfo = DouglasWatchKitApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,17 +48,6 @@
 				439D725F1DDFD90A00FC38B3 /* DouglasWatchKitApp Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		439D72781DDFD90A00FC38B3 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				439D72701DDFD90A00FC38B3 /* DouglasWatchKitApp.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -90,16 +65,7 @@
 		4349E78F1DBE5B0E005E3C9F /* ASCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCell.swift; sourceTree = "<group>"; };
 		4349E7901DBE5B0E005E3C9F /* ASCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASCell.xib; sourceTree = "<group>"; };
 		439D72521DDFD90A00FC38B3 /* DouglasWatchKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouglasWatchKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		439D72551DDFD90A00FC38B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		439D72571DDFD90A00FC38B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		439D72591DDFD90A00FC38B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439D725E1DDFD90A00FC38B3 /* DouglasWatchKitApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DouglasWatchKitApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		439D72641DDFD90A00FC38B3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		439D72651DDFD90A00FC38B3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		439D72671DDFD90A00FC38B3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		439D72691DDFD90A00FC38B3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		439D726B1DDFD90A00FC38B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		439D726D1DDFD90A00FC38B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D1D3081D9F51E800190B67 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30A1D9F521C00190B67 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		43D1D30C1D9F525000190B67 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
@@ -134,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				430CD3181D9DE65800B3D98C /* Douglas */,
-				439D72531DDFD90A00FC38B3 /* DouglasWatchKitApp */,
-				439D72621DDFD90A00FC38B3 /* DouglasWatchKitApp Extension */,
 				430CD3171D9DE65800B3D98C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,37 +130,6 @@
 				430CD3271D9DE65800B3D98C /* Info.plist */,
 			);
 			path = Douglas;
-			sourceTree = "<group>";
-		};
-		439D72531DDFD90A00FC38B3 /* DouglasWatchKitApp */ = {
-			isa = PBXGroup;
-			children = (
-				439D72541DDFD90A00FC38B3 /* Interface.storyboard */,
-				439D72571DDFD90A00FC38B3 /* Assets.xcassets */,
-				439D72591DDFD90A00FC38B3 /* Info.plist */,
-			);
-			path = DouglasWatchKitApp;
-			sourceTree = "<group>";
-		};
-		439D72621DDFD90A00FC38B3 /* DouglasWatchKitApp Extension */ = {
-			isa = PBXGroup;
-			children = (
-				439D72651DDFD90A00FC38B3 /* InterfaceController.swift */,
-				439D72671DDFD90A00FC38B3 /* ExtensionDelegate.swift */,
-				439D72691DDFD90A00FC38B3 /* NotificationController.swift */,
-				439D726B1DDFD90A00FC38B3 /* Assets.xcassets */,
-				439D726D1DDFD90A00FC38B3 /* Info.plist */,
-				439D72631DDFD90A00FC38B3 /* Supporting Files */,
-			);
-			path = "DouglasWatchKitApp Extension";
-			sourceTree = "<group>";
-		};
-		439D72631DDFD90A00FC38B3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				439D72641DDFD90A00FC38B3 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		43D1D3101D9F526A00190B67 /* CoreData */ = {
@@ -251,12 +184,10 @@
 				430CD3121D9DE65800B3D98C /* Sources */,
 				430CD3131D9DE65800B3D98C /* Frameworks */,
 				430CD3141D9DE65800B3D98C /* Resources */,
-				439D72781DDFD90A00FC38B3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				439D726F1DDFD90A00FC38B3 /* PBXTargetDependency */,
 			);
 			name = Douglas;
 			productName = Douglas;
@@ -314,7 +245,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Siri = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -369,8 +300,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439D72581DDFD90A00FC38B3 /* Assets.xcassets in Resources */,
-				439D72561DDFD90A00FC38B3 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439D726C1DDFD90A00FC38B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439D726A1DDFD90A00FC38B3 /* NotificationController.swift in Sources */,
-				439D72681DDFD90A00FC38B3 /* ExtensionDelegate.swift in Sources */,
-				439D72661DDFD90A00FC38B3 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +345,6 @@
 			isa = PBXTargetDependency;
 			target = 439D725D1DDFD90A00FC38B3 /* DouglasWatchKitApp Extension */;
 			targetProxy = 439D72601DDFD90A00FC38B3 /* PBXContainerItemProxy */;
-		};
-		439D726F1DDFD90A00FC38B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 439D72511DDFD90A00FC38B3 /* DouglasWatchKitApp */;
-			targetProxy = 439D726E1DDFD90A00FC38B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -443,14 +363,6 @@
 				430CD3251D9DE65800B3D98C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		439D72541DDFD90A00FC38B3 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				439D72551DDFD90A00FC38B3 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -553,7 +465,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Douglas/Douglas.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 333JD3XATC;
 				INFOPLIST_FILE = Douglas/Info.plist;
@@ -570,7 +481,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Douglas/Douglas.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 333JD3XATC;
 				INFOPLIST_FILE = Douglas/Info.plist;
@@ -586,7 +496,6 @@
 		439D72711DDFD90A00FC38B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 333JD3XATC;
@@ -605,7 +514,6 @@
 		439D72721DDFD90A00FC38B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 333JD3XATC;
@@ -683,6 +591,7 @@
 				439D72741DDFD90A00FC38B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		439D72771DDFD90A00FC38B3 /* Build configuration list for PBXNativeTarget "DouglasWatchKitApp" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +600,7 @@
 				439D72721DDFD90A00FC38B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -21,7 +21,7 @@ class SettingsTableViewController: UITableViewController {
 
 
         tableView.tableFooterView = UIView()
-        self.view.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 52/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1.0)
         
          let taskColor = UIColor(red: 111/255.0, green: 224/255.0, blue: 120/255.0, alpha: 1.0)
         

@@ -22,7 +22,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tblTasks.estimatedRowHeight = 55
         tblTasks.rowHeight = UITableViewAutomaticDimension
         
-        self.tblTasks.backgroundColor = UIColor(red: 64/255.0, green: 67/255.0, blue: 68/255.0, alpha: 0)
+        self.tblTasks.backgroundColor = UIColor(red: 52/255.0, green: 55/255.0, blue: 55/255.0, alpha: 0)
 
 
         self.tblTasks.reloadData()
